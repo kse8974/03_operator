@@ -7,17 +7,13 @@ int main(int argc, char *argv[]) {
 	int x;
 	int y;
 	int z;
-	int w;
 	
-	printf("input the second :  ");
-	scanf("%i", &x);
-	
-	y = x /3600;
-	z = (x - 3600*y)/60;
-	w = x - (3600*y) - (60*z);
+	printf("input 3 integers: ");
+	scanf("%d %d %d", &x, &y, &z);	
 	
 	
-	printf("The time for %i second is %i : %i : %i\n", x, y, z, w);
+	printf("average of %i %i %i is %f\n", x,y,z,(double)(x+y+z)/3);
+	
 
 	return 0;
 }
