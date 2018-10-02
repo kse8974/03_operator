@@ -8,19 +8,16 @@ int main(int argc, char *argv[]) {
 	int y;
 	int z;
 	int w;
-	int result;
 	
-	printf("input the year :  ");
+	printf("input the second :  ");
 	scanf("%i", &x);
 	
-	y = x % 4;
-	z = x % 100;
-	w = x % 400;
+	y = x /3600;
+	z = (x - 3600*y)/60;
+	w = x - (3600*y) - (60*z);
 	
 	
-	result = (y==0 && z!=0) || (w==0);
-	
-	printf("Is the year %i the leap year? : %d \n",x, result);
+	printf("The time for %i second is %i : %i : %i\n", x, y, z, w);
 
 	return 0;
 }
