@@ -7,14 +7,20 @@ int main(int argc, char *argv[]) {
 	int x;
 	int y;
 	int z;
+	int w;
+	int result;
 	
-	printf("input the second :  ");
+	printf("input the year :  ");
 	scanf("%i", &x);
 	
-	y = x / 60;
-	z = x % 60;
+	y = x % 4;
+	z = x % 100;
+	w = x % 400;
 	
-	printf("the time is %i :%i \n", y,z);
+	
+	result = (y==0 && z!=0) || (w==0);
+	
+	printf("Is the year %i the leap year? : %d \n",x, result);
 
 	return 0;
 }
